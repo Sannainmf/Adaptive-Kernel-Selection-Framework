@@ -2,7 +2,7 @@
 
 A comprehensive PyTorch implementation of adaptive receptive field CNNs with intelligent kernel selection mechanisms. This framework compares adaptive convolutional neural networks against standard CNNs across multiple architectures and datasets.
 
-## 🚀 Features
+## Features
 
 - **Adaptive Kernel Selection**: Dynamic selection between 3x3, 5x5, and 7x7 kernels based on feature statistics
 - **Multiple Architectures**: 3-layer, 6-layer, and VGG11 CNN implementations
@@ -10,7 +10,7 @@ A comprehensive PyTorch implementation of adaptive receptive field CNNs with int
 - **Statistical Analysis**: Comprehensive evaluation with multiple random seeds
 - **Clean Visualization**: Professional plotting and result analysis
 
-## 📁 Repository Structure
+## Repository Structure
 
 ### 3-Layer CNNs
 - `3LayerC10.py` - CIFAR-10 (30 epochs)
@@ -27,7 +27,7 @@ A comprehensive PyTorch implementation of adaptive receptive field CNNs with int
 - `vgg11C100.py` - CIFAR-100 (65 epochs)
 - `vgg11FM.py` - Fashion-MNIST (25 epochs)
 
-## 🔧 Installation
+## Installation
 
 ```bash
 # Clone the repository
@@ -38,7 +38,7 @@ cd Adaptive-Kernel-Selection-Framework
 pip install torch torchvision numpy matplotlib scipy
 ```
 
-## 🎯 Usage
+## Usage
 
 ### Quick Start
 ```bash
@@ -68,7 +68,7 @@ Seed 123 (2/5)
 Results - Adaptive: 85.12±0.34%, Standard: 83.16±0.28%, Improvement: +1.96±0.41%, p=0.0234
 ```
 
-## 🧠 Architecture Details
+## Architecture Details
 
 ### Adaptive Kernel Selection Mechanism
 
@@ -100,7 +100,7 @@ class AdaptiveKernelSelector(nn.Module):
 | 6-Layer CNN | 6 adaptive | 12 standard | Balanced architecture |
 | VGG11 | 8 adaptive | 8 standard | Deep network analysis |
 
-## 📊 Results Analysis
+## Results Analysis
 
 ### Generated Plots
 Each experiment produces comprehensive visualizations:
@@ -113,7 +113,7 @@ Each experiment produces comprehensive visualizations:
 - **Confidence intervals** for accuracy measurements
 - **Effect size analysis** for practical significance
 
-## 🔬 Experimental Setup
+## Experimental Setup
 
 ### Datasets
 - **CIFAR-10**: 10 classes, 32×32 RGB images
@@ -131,19 +131,7 @@ Each experiment produces comprehensive visualizations:
 - **Cross-Validation**: Consistent train/validation splits
 - **Statistical Testing**: Paired t-tests for significance
 
-## 📈 Expected Performance
-
-### Typical Improvements
-- **CIFAR-10**: 1-3% accuracy improvement
-- **CIFAR-100**: 2-4% accuracy improvement
-- **Fashion-MNIST**: 1-2% accuracy improvement
-
-### Computational Overhead
-- **Training Time**: ~10-15% increase due to adaptive mechanism
-- **Memory Usage**: ~20% increase for kernel selection weights
-- **Inference Speed**: Minimal impact after training
-
-## 🛠️ Customization
+## Customization
 
 ### Adding New Datasets
 1. Update normalization values in `transforms.Normalize()`
@@ -154,38 +142,3 @@ Each experiment produces comprehensive visualizations:
 1. Add new adaptive layers to `adaptive_positions` list
 2. Create corresponding `AdaptiveKernelSelector` instances
 3. Update kernel selection analysis ranges
-
-## 📝 Citation
-
-If you use this framework in your research, please cite:
-
-```bibtex
-@misc{adaptive_kernel_selection_2024,
-  title={Adaptive Kernel Selection Framework for Convolutional Neural Networks},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/Sannainmf/Adaptive-Kernel-Selection-Framework}
-}
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit:
-- New dataset implementations
-- Additional CNN architectures
-- Performance optimizations
-- Documentation improvements
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- PyTorch team for the excellent deep learning framework
-- Original VGG paper authors for the VGG11 architecture
-- CIFAR and Fashion-MNIST dataset creators
-
----
-
-**Note**: This framework is designed for research and educational purposes. For production deployments, consider additional optimizations and thorough testing.
